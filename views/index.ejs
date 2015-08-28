@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+  <head>
+    <title>myCart Browse & Search</title>
+    <link href='/css/bootstrap.css' rel="stylesheet">
+    <style>
+li{
+  list-style: none;
+}
+.main-title{
+  text-align: center;
+}
+li.prodName{
+  text-align: center;
+}
+.top-cat{
+  text-align: center;
+  margin-top:20px;
+  color:;
+}
+.top-cat > li{
+        list-style: none;
+        display: inline-block;
+        padding: 0 30px;
+        font-size: 14px;
+        font-weight: 600;
+
+      }
+      .top-cat > a{
+        color:rgb(44,44,44);
+        cursor: pointer;
+      }
+      .search-panel1{
+        display: inline-block;
+        margin-left: 20%;
+        
+        min-width: 400px;
+        
+        height: 39px;
+        padding: 0 10px;
+        font-size: 16px;
+
+      }
+      .minibag-panel{
+        display: inline-block;
+        float: right;
+        padding-right: 10%;
+      }
+      .logo{
+        display: inline-block;
+        font-size: 25px;
+        color:rgb(44,44,44);
+      }
+      .logo > img{
+        width: 40px;
+      }
+      .pageheader{
+        border-bottom: 1px solid #d3d3d3;
+        padding-bottom: 15px;
+        margin-bottom:20px;
+      }
+    .prodList{
+      text-align: center;
+    }
+    .dropdown a:hover{
+      text-decoration: none;
+    }
+    .dropdown:hover > .dropdown-menu{
+      display: block;
+    }
+    .dropdown-menu{
+      width: 300px;
+    } 
+
+    .cart-item{
+      padding: 10px;
+    }
+    .cart-item >li{
+      display: inline-block;
+    }
+    .cart-item__text{
+      width: 54%;
+      display: inline-block;
+      vertical-align: top;
+      min-height: 90px;
+      position: relative;
+      padding: 0 5px;
+
+    }
+    .cart-item__text > strong{
+      display: inline-block;
+    }
+    .cart-item__img  img{
+      width:50px;
+      height: auto;
+    }
+    .cart-cartSubtotal{
+      float: right;
+      padding-right: 10px;
+    }
+
+    .minibag-panel footer{
+      text-align: center;
+    padding: 12px 0;
+    border-top: 1px solid #d3d3d3;
+    }
+    footer{
+      margin-top: 30px;
+    }
+    .side-panel-item{
+          min-height: 220px;
+        border-right: 1px solid #d3d3d3;
+        color:rgb(102,102,102);
+        padding: 10px;
+        margin: 10px 0;
+    }
+
+
+
+    </style>
+  </head>
+  <body>
+  <div class="panel "><h3 id="main-title" class="main-title">Browse & Search with React</h3></div>
+	
+     <div class="container panel-body">
+     <header class="pageheader">
+      <% include templates/header.ejs%>
+      
+     </header>
+      <div class="row">
+        <aside id="" class="col-md-4 hidden-xs">
+        <p>FILTERS </p>
+          <div class="side-panel-item panel"><strong>Size</strong></div>
+          <div class="side-panel-item panel"><strong>Color</strong></div>
+          <div class="side-panel-item panel"><strong>Brand</strong></div>
+        </aside>
+        <section id="react-main-mount" class="col-xs-12 col-md-8">
+          <%- reactOutput %>
+        </section>
+          
+        </div>
+        <% include templates/footer.ejs%> 
+      </div> 
+	<script src="/main.js"></script>
+  </body>
+</html>
